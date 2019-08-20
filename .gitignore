@@ -1,0 +1,11 @@
+.idea/
+*.pyc
+/.git/
+.DS_Store
+package-lock.json
+/node_modules/
+/dist/
+/npm-debug.log
+/operations_api/config.py
+/operations_api/test.db
+/venv/
