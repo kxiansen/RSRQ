@@ -17,6 +17,8 @@ import redirect_routes from './components/saas/routes'
 * Change by BingKuang on 2019/8/16
 */
 import Manage from './components/manage/Manage.vue'
+import www from './components/manage/www.vue'
+import www_routes from './components/manage/routes'
 
 const routes = [
     {
@@ -53,10 +55,30 @@ const routes = [
         path: '/saas',
         routes: redirect_routes
     },
+    // {
+    //     path: '*',
+    //     redirect: '/'
+    // },
+
+];
+
+const manage_routes = [
     {
-        path: '*',
-        redirect: '/'
+        path: '',
+        component: Home
     },
+    {
+        path: 'welcome',
+        component: www
+    },
+    {
+        path: 'www',
+        routes: www_routes
+    },
+    // {
+    //     path: '*',
+    //     redirect: '/'
+    // },
 
 ];
 
@@ -86,9 +108,9 @@ export default [
         component: Deny
     },
     {
-        path: '/manage',
-//        name: 'manage',
-        component: Manage
+        path: '/ma',
+        component: Manage,
+        children: load_route(manage_routes)
     },
     {
         path: '/',
