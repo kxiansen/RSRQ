@@ -96,7 +96,7 @@
             }
         },
         created() {
-            this.back_login();
+            // this.back_login();
             this.personInfo();
 
         }
