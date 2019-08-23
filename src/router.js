@@ -19,11 +19,17 @@ import redirect_routes from './components/saas/routes'
 import Manage from './components/manage/Manage.vue'
 import www from './components/manage/www.vue'
 import www_routes from './components/manage/routes'
+import Docs from './components/Docs.vue'
+import Test from './components/Test.vue'
 
 const routes = [
     {
         path: '',
         name: 'home',
+        component: Home
+    },
+    {
+        path: '/home',
         component: Home
     },
     {
@@ -68,7 +74,7 @@ const manage_routes = [
         component: Home
     },
     {
-        path: 'welcome',
+        path: 'www',
         component: www
     },
     {
@@ -106,6 +112,14 @@ export default [
     {
         path: '/deny',
         component: Deny
+    },
+    {
+        path: '/docs',
+        component: Docs
+    },
+    {
+        path: '/test',
+        component: Test
     },
     {
         path: '/ma',

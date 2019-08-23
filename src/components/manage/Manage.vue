@@ -95,7 +95,7 @@
                 this.login_user = localStorage.getItem('nickname');
             }
         },
-        created() {
+        mounted() {
             // this.back_login();
             this.personInfo();
 

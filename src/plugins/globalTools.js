@@ -120,6 +120,7 @@ tools.install = function (Vue, router) {
         }
         return false
     };
+    
     // 路由导航钩子
 //     router.beforeEach((to, from, next) => {
 //         if (['/', '/login', '/deny','/account/person','/account/personset','/home','/welcome','/manage','/manage/www/www'].includes(to.path)) {
