@@ -7,19 +7,19 @@
         
         <el-row>
             <el-col :span="16">
-                <el-form :inline="true" :model="host_query">
+                <el-form :inline="true" :model="form">
                     <el-form-item>
                         dev-环境
                     </el-form-item>
                 </el-form>
             </el-col>
             <el-col :span="8"  style="text-align: right">
-                    <el-button type="primary" @click="toRescue(url='http://192.168.70.40:8080/jenkins/')">dev-Jenkins</el-button>
+                    <el-button type="primary" @click="toRescue(url='http://192.168.70.40:8080/')">dev-Jenkins</el-button>
             </el-col>
         </el-row>
         <el-row>
             <el-col :span="16">
-                <el-form :inline="true" :model="host_query">
+                <el-form :inline="true" :model="form">
                     <el-form-item>
                         qa-环境
                     </el-form-item>
@@ -31,7 +31,7 @@
         </el-row>
         <el-row>
             <el-col :span="12">
-                <el-form :inline="true" :model="host_query">
+                <el-form :inline="true" :model="form">
                     <el-form-item>
                         pre-环境
                     </el-form-item>
@@ -55,9 +55,9 @@
                 window.open(jenkins_url);
             },
             //刷新
-            refresh(){
-                this.fetch(this.currentPage);
-            },
+            // refresh(){
+            //     this.fetch(this.currentPage);
+            // },
         }
     }
 
